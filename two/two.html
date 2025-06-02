@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Appointment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 90vw;
+      height: 75vh;
+    }
+    .image-box {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .form-container {
+      flex: 1;
+      padding: 10px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 20px;
+      border-bottom: 2px solid #800000;
+      padding-bottom: 5px;
+    }
+    .form-group {
+      margin-bottom: 6px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 5px;
+      font-size: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 6px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+    .form-inline {
+      display: flex;
+      gap: 6px;
+    }
+    .form-inline input {
+      flex: 1;
+    }
+    .form-inline label {
+      font-weight: normal;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    .form-inline input[type="radio"],
+    .form-inline input[type="checkbox"] {
+      margin-right: 4px;
+    }
+    .form-group p {
+      margin: 2px 0 4px 0;
+      font-size: 12px;
+    }
+    .form-checks label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-box">
+      <img src="https://www.shutterstock.com/image-vector/male-doctor-smiling-happy-face-600nw-2481032615.jpg" alt="Doctor Image" />
+    </div>
+    <div class="form-container">
+      <h2>Doctor Appointment Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="appointment-date">Appointment Date</label>
+          <input type="date" id="appointment-date" name="appointment-date" />
+        </div>
+        <div class="form-group">
+          <label for="appointment-time">Appointment Time</label>
+          <input type="time" id="appointment-time" name="appointment-time" />
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <div class="form-inline">
+            <input type="text" name="first-name" placeholder="First" />
+            <input type="text" name="last-name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="form-inline">
+            <label><input type="radio" name="gender" value="male" /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="#####" />
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <div class="form-inline">
+            <input type="text" name="city" placeholder="City" />
+            <input type="text" name="state" placeholder="State" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="query">Your Query</label>
+          <textarea id="query" name="query" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Appointment Type</label>
+          <p>Select which appointment type(s) you require</p>
+          <div class="form-checks">
+            <label><input type="checkbox" name="appointment-type" value="cervix" /> Cervix checkup</label>
+            <label><input type="checkbox" name="appointment-type" value="heart" /> Heart checkup</label>
+            <label><input type="checkbox" name="appointment-type" value="eye" /> Eye check-up</label>
+            <label><input type="checkbox" name="appointment-type" value="hearing" /> Hearing Test</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
